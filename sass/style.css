@@ -116,6 +116,7 @@ ul li a {
             transform: translateX(-100vw);
   }
   .header {
+    height: 100vh;
     background: url(../Images/mobile/image-hero.jpg);
     background-size: cover;
   }
@@ -141,7 +142,11 @@ ul li a {
   .header nav .menu {
     background: black;
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
   }

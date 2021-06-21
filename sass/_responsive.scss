@@ -3,6 +3,7 @@
         transform: translateX(-100vw);
     }
     .header {
+        height: 100vh;
         background: url(../Images/mobile/image-hero.jpg);
         background-size: cover;
         nav {
@@ -26,7 +27,11 @@
             .menu {
                 background: $Black;
                 position: absolute;
-                inset: 0;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100vh;
                 transition: all 250ms ease-in-out;
                 .nav-links {
                     flex-direction: column;
