@@ -89,7 +89,7 @@ ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 80vh;
+  height: 90vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -111,6 +111,9 @@ ul li a {
 }
 
 @media screen and (max-width: 767px) {
+  .fixed {
+    position: fixed;
+  }
   .open {
     -webkit-transform: translateX(-100vw);
             transform: translateX(-100vw);
@@ -141,7 +144,7 @@ ul li a {
   }
   .header nav .menu {
     background: black;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -182,6 +185,9 @@ ul li a {
 }
 
 @media screen and (max-width: 1023px) {
+  .fixed {
+    position: fixed;
+  }
   .open {
     -webkit-transform: translateX(-100vw);
             transform: translateX(-100vw);
@@ -208,7 +214,10 @@ ul li a {
   .header nav .menu {
     background: black;
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
   }
