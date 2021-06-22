@@ -1,60 +1,69 @@
 @include media-mobile {
     .fixed {
-        position: fixed;
+        height: 100%;
+        overflow: hidden;
     }
     .open {
-        transform: translateX(-100vw);
+        transform: translateX(-150vw);
     }
     .header {
         height: 100vh;
         background: url(../Images/mobile/image-hero.jpg);
         background-size: cover;
-        nav {
-            padding-top: 2em;
-            .menu-hamburger {
-                display: block;
-                position: relative;
-                transform: translateY(-10px);
-                margin-right: 1em;
-                ;
-                svg {
-                    position: absolute;
+        position: relative;
+        .nav-container {
+            position: fixed;
+            nav {
+                width: 85%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 2em;
+                .menu-hamburger {
+                    display: block;
+                    position: relative;
+                    transform: translateY(-10px);
+                    margin-right: 1em;
+                    ;
+                    svg {
+                        position: fixed;
+                        z-index: 10;
+                    }
+                }
+                .logo {
+                    position: relative;
                     z-index: 10;
                 }
-            }
-            .logo {
-                margin-left: -0.5em;
-                position: relative;
-                z-index: 10;
-            }
-            .menu {
-                background: $Black;
-                position: fixed;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 100vh;
-                transition: all 250ms ease-in-out;
-                .nav-links {
-                    flex-direction: column;
-                    width: 85%;
+                .menu {
+                    background: $Black;
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
                     height: 100vh;
-                    margin: 0 auto;
-                    justify-content: center;
-                    .nav-link {
-                        font-size: 1.5rem;
-                        margin-bottom: 0.7em;
-                        .nav-link-item {
-                            margin: 0em;
-                            text-transform: uppercase;
-                            font-family: $text;
+                    transition: all 250ms ease-in-out;
+                    .nav-links {
+                        flex-direction: column;
+                        width: 85%;
+                        height: 100vh;
+                        margin: 0 auto;
+                        justify-content: center;
+                        .nav-link {
+                            font-size: 1.5rem;
+                            margin-bottom: 0.7em;
+                            .nav-link-item {
+                                margin: 0em;
+                                text-transform: uppercase;
+                                font-family: $text;
+                            }
                         }
                     }
                 }
             }
         }
         .title-container {
+            height: 100vh;
             justify-content: center;
             .title {
                 font-size: 2.2rem;
@@ -65,55 +74,66 @@
 
 @include media-tablet {
     .fixed {
-        position: fixed;
+        height: 100%;
+        overflow: hidden;
     }
     .open {
         transform: translateX(-100vw);
     }
     .header {
-        nav {
-            padding-top: 2em;
-            .menu-hamburger {
-                display: block;
-                position: relative;
-                transform: translateY(-10px);
-                margin-right: 1em;
-                ;
-                svg {
-                    position: absolute;
+        .nav-container {
+            position: fixed;
+            nav {
+                width: 85%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 2em;
+                .menu-hamburger {
+                    display: block;
+                    position: relative;
+                    transform: translateY(-10px);
+                    margin-right: 1em;
+                    ;
+                    svg {
+                        position: absolute;
+                        z-index: 10;
+                    }
+                }
+                .logo {
+                    position: relative;
                     z-index: 10;
                 }
-            }
-            .logo {
-                margin-left: -0.5em;
-                position: relative;
-                z-index: 10;
-            }
-            .menu {
-                background: $Black;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                transition: all 250ms ease-in-out;
-                .nav-links {
-                    flex-direction: column;
-                    width: 85%;
+                .menu {
+                    background: $Black;
                     height: 100vh;
-                    margin: 0 auto;
-                    justify-content: center;
-                    .nav-link {
-                        font-size: 1.5rem;
-                        margin-bottom: 0.7em;
-                        .nav-link-item {
-                            margin: 0em;
-                            text-transform: uppercase;
-                            font-family: $text;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    transition: all 250ms ease-in-out;
+                    .nav-links {
+                        flex-direction: column;
+                        width: 85%;
+                        height: 100vh;
+                        margin: 0 auto;
+                        justify-content: center;
+                        .nav-link {
+                            font-size: 1.5rem;
+                            margin-bottom: 0.7em;
+                            .nav-link-item {
+                                margin: 0em;
+                                text-transform: uppercase;
+                                font-family: $text;
+                            }
                         }
                     }
                 }
             }
+        }
+        .title-container {
+            height: 100vh;
         }
     }
 }

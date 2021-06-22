@@ -16,15 +16,20 @@ ul li a {
 
 .header {
   background: url(../Images/desktop/image-hero.jpg);
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   max-width: 1440px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
-.header nav {
+.header .nav-container {
+  width: 100%;
+}
+
+.header .nav-container nav {
   padding-top: 5em;
   width: 80%;
   margin: 0 auto;
@@ -39,11 +44,11 @@ ul li a {
           align-items: center;
 }
 
-.header nav .menu-hamburger {
+.header .nav-container nav .menu-hamburger {
   display: none;
 }
 
-.header nav .menu .nav-links {
+.header .nav-container nav .menu .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,14 +57,14 @@ ul li a {
   transition: all 250ms ease-in-out;
 }
 
-.header nav .menu .nav-links .nav-link .nav-link-item {
+.header .nav-container nav .menu .nav-links .nav-link .nav-link-item {
   margin: 0em 1em;
   font-family: "Alata", sans-serif;
   color: white;
   position: relative;
 }
 
-.header nav .menu .nav-links .nav-link .nav-link-item::after {
+.header .nav-container nav .menu .nav-links .nav-link .nav-link-item::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -77,14 +82,14 @@ ul li a {
           transform-origin: left;
 }
 
-.header nav .menu .nav-links .nav-link .nav-link-item:hover::after {
+.header .nav-container nav .menu .nav-links .nav-link .nav-link-item:hover::after {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
 .header .title-container {
   max-width: 1440px;
-  width: 80vw;
+  width: 80%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,37 +117,49 @@ ul li a {
 
 @media screen and (max-width: 767px) {
   .fixed {
-    position: fixed;
+    height: 100%;
+    overflow: hidden;
   }
   .open {
-    -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw);
+    -webkit-transform: translateX(-150vw);
+            transform: translateX(-150vw);
   }
   .header {
     height: 100vh;
     background: url(../Images/mobile/image-hero.jpg);
     background-size: cover;
+    position: relative;
   }
-  .header nav {
+  .header .nav-container {
+    position: fixed;
+  }
+  .header .nav-container nav {
+    width: 85%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 2em;
   }
-  .header nav .menu-hamburger {
+  .header .nav-container nav .menu-hamburger {
     display: block;
     position: relative;
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
     margin-right: 1em;
   }
-  .header nav .menu-hamburger svg {
-    position: absolute;
+  .header .nav-container nav .menu-hamburger svg {
+    position: fixed;
     z-index: 10;
   }
-  .header nav .logo {
-    margin-left: -0.5em;
+  .header .nav-container nav .logo {
     position: relative;
     z-index: 10;
   }
-  .header nav .menu {
+  .header .nav-container nav .menu {
     background: black;
     position: fixed;
     top: 0;
@@ -153,7 +170,7 @@ ul li a {
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
   }
-  .header nav .menu .nav-links {
+  .header .nav-container nav .menu .nav-links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -165,16 +182,17 @@ ul li a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .header nav .menu .nav-links .nav-link {
+  .header .nav-container nav .menu .nav-links .nav-link {
     font-size: 1.5rem;
     margin-bottom: 0.7em;
   }
-  .header nav .menu .nav-links .nav-link .nav-link-item {
+  .header .nav-container nav .menu .nav-links .nav-link .nav-link-item {
     margin: 0em;
     text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
   }
   .header .title-container {
+    height: 100vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -186,33 +204,45 @@ ul li a {
 
 @media screen and (max-width: 1023px) {
   .fixed {
-    position: fixed;
+    height: 100%;
+    overflow: hidden;
   }
   .open {
     -webkit-transform: translateX(-100vw);
             transform: translateX(-100vw);
   }
-  .header nav {
+  .header .nav-container {
+    position: fixed;
+  }
+  .header .nav-container nav {
+    width: 85%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 2em;
   }
-  .header nav .menu-hamburger {
+  .header .nav-container nav .menu-hamburger {
     display: block;
     position: relative;
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
     margin-right: 1em;
   }
-  .header nav .menu-hamburger svg {
+  .header .nav-container nav .menu-hamburger svg {
     position: absolute;
     z-index: 10;
   }
-  .header nav .logo {
-    margin-left: -0.5em;
+  .header .nav-container nav .logo {
     position: relative;
     z-index: 10;
   }
-  .header nav .menu {
+  .header .nav-container nav .menu {
     background: black;
+    height: 100vh;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -221,7 +251,7 @@ ul li a {
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
   }
-  .header nav .menu .nav-links {
+  .header .nav-container nav .menu .nav-links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -233,14 +263,17 @@ ul li a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .header nav .menu .nav-links .nav-link {
+  .header .nav-container nav .menu .nav-links .nav-link {
     font-size: 1.5rem;
     margin-bottom: 0.7em;
   }
-  .header nav .menu .nav-links .nav-link .nav-link-item {
+  .header .nav-container nav .menu .nav-links .nav-link .nav-link-item {
     margin: 0em;
     text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
+  }
+  .header .title-container {
+    height: 100vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
