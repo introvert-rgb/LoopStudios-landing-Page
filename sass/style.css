@@ -17,6 +17,7 @@ ul li a {
 .header {
   background: url(../Images/desktop/image-hero.jpg);
   width: 100%;
+  margin-bottom: 7em;
   height: 100vh;
   max-width: 1440px;
   background-repeat: no-repeat;
@@ -115,6 +116,53 @@ ul li a {
   border: 2px solid white;
 }
 
+.second-section {
+  max-width: 1440px;
+  width: 100%;
+  margin-bottom: 7em;
+}
+
+.second-section .container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+}
+
+.second-section .container .img-container {
+  width: 60%;
+}
+
+.second-section .container .img-container img {
+  width: 100%;
+}
+
+.second-section .container .content-container {
+  background: white;
+  position: absolute;
+  right: 10%;
+  padding-left: 5em;
+  padding-top: 5em;
+  bottom: 0;
+  left: 45%;
+}
+
+.second-section .container .content-container .content-head {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+.second-section .container .content-container .content-detail {
+  font-family: "Alata", sans-serif;
+  width: 40ch;
+  color: #8c8c8c;
+}
+
 @media screen and (max-width: 767px) {
   .fixed {
     height: 100%;
@@ -129,6 +177,7 @@ ul li a {
     background: url(../Images/mobile/image-hero.jpg);
     background-size: cover;
     position: relative;
+    margin-bottom: 5em;
   }
   .header .nav-container {
     position: fixed;
@@ -199,6 +248,38 @@ ul li a {
   }
   .header .title-container .title {
     font-size: 2.2rem;
+  }
+  .second-section {
+    margin-bottom: 5em;
+  }
+  .second-section .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .second-section .container .img-container {
+    width: 100%;
+  }
+  .second-section .container .content-container {
+    background: white;
+    position: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    padding: 2em 0em 0em 0em !important;
+  }
+  .second-section .container .content-container .content-head {
+    width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.9rem !important;
+    margin-bottom: 1em;
+  }
+  .second-section .container .content-container .content-detail {
+    font-family: "Alata", sans-serif;
+    color: #8c8c8c;
+    width: 100% !important;
   }
 }
 
@@ -274,6 +355,47 @@ ul li a {
   }
   .header .title-container {
     height: 100vh;
+  }
+  .second-section {
+    margin-bottom: 5em;
+  }
+  .second-section .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .second-section .container .img-container {
+    width: 100%;
+  }
+  .second-section .container .content-container {
+    background: white;
+    position: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    padding: 2em 0em 0em 0em !important;
+  }
+  .second-section .container .content-container .content-head {
+    width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  .second-section .container .content-container .content-detail {
+    font-family: "Alata", sans-serif;
+    color: #8c8c8c;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1438px) {
+  .content-container .content-head {
+    font-size: 2.21rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,3 +9,9 @@
         @content;
     }
 }
+
+@mixin media-mini-laptop {
+    @media screen and (max-width: 1438px) {
+        @content;
+    }
+}

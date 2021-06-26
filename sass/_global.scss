@@ -17,6 +17,7 @@ ul {
 .header {
     background: url(../Images/desktop/image-hero.jpg);
     width: 100%;
+    margin-bottom: 7em;
     height: 100vh;
     max-width: 1440px;
     background-repeat: no-repeat;
@@ -87,6 +88,45 @@ ul {
             line-height: 1.1;
             text-transform: uppercase;
             border: 2px solid $white;
+        }
+    }
+}
+
+.second-section {
+    max-width: 1440px;
+    width: 100%;
+    margin-bottom: 7em;
+    .container {
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+        position: relative;
+        .img-container {
+            width: 60%;
+            img {
+                width: 100%;
+            }
+        }
+        .content-container {
+            background: $white;
+            position: absolute;
+            right: 10%;
+            padding-left: 5em;
+            padding-top: 5em;
+            bottom: 0;
+            left: 45%;
+            .content-head {
+                width: 100%;
+                font-family: $text;
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                margin-bottom: 1em;
+            }
+            .content-detail {
+                font-family: $heading;
+                width: 40ch;
+                color: $DarkGray;
+            }
         }
     }
 }
