@@ -12,6 +12,7 @@
         background-size: cover;
         position: relative;
         margin-bottom: 5em;
+        z-index: 12;
         .nav-container {
             position: fixed;
             nav {
@@ -74,6 +75,7 @@
     .second-section {
         margin-bottom: 5em;
         .container {
+            width: 85%;
             flex-direction: column;
             .img-container {
                 width: 100%;
@@ -89,7 +91,7 @@
                     width: 100%;
                     font-family: $text;
                     text-transform: uppercase;
-                    font-size: 1.9rem !important;
+                    font-size: 1.7rem !important;
                     margin-bottom: 1em;
                 }
                 .content-detail {
@@ -97,6 +99,17 @@
                     color: $DarkGray;
                     width: 100% !important;
                 }
+            }
+        }
+    }
+    .third-section {
+        display: none;
+    }
+    .third-section-mobile {
+        .section-container {
+            .middle {
+                grid-template-columns: 1fr!important;
+                grid-template-rows: repeat(8, 100px) !important;
             }
         }
     }
@@ -111,6 +124,7 @@
         transform: translateX(-100vw);
     }
     .header {
+        z-index: 12;
         .nav-container {
             position: fixed;
             nav {
@@ -194,6 +208,143 @@
                     width: 80%;
                     margin: 0 auto;
                     text-align: center;
+                }
+            }
+        }
+    }
+    .third-section {
+        display: none;
+    }
+    .third-section-mobile {
+        display: block;
+        max-width: 1440px;
+        width: 100%;
+        .section-container {
+            width: 85%;
+            margin: 0 auto;
+            .top {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: $text;
+                font-size: 1.7rem;
+                text-transform: uppercase;
+                padding-bottom: 3rem;
+            }
+            .middle {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 100px);
+                grid-gap: 1.7em;
+                .photo-gallery {
+                    display: flex;
+                    align-items: flex-end;
+                    padding-left: 0.5em;
+                    padding-bottom: 0.5em;
+                    font-size: 1.5rem;
+                    color: $white;
+                    font-family: $text;
+                    text-transform: uppercase;
+                    position: relative;
+                    z-index: 1;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        height: 100%;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        background: linear-gradient(to right, rgba(0, 0, 0, 0.7) -26%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+                    }
+                }
+                .photo-1 {
+                    background: url(../Images/mobile/image-deep-earth.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .photo-2 {
+                    background: url(../Images/mobile/image-night-arcade.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .photo-3 {
+                    background: url(../Images/mobile/image-soccer-team.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .photo-4 {
+                    background: url(../Images/mobile/image-grid.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .photo-5 {
+                    background: url(../Images/mobile/image-from-above.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .photo-6 {
+                    background: url(../Images/mobile/image-pocket-borealis.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .photo-7 {
+                    background: url(../Images/mobile/image-curiosity.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .photo-8 {
+                    background: url(../Images/mobile/image-fisheye.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            .button-cta {
+                padding-top: 3em;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 5em;
+                align-items: center;
+                .cta {
+                    background: transparent;
+                    border: 2px solid $DarkGray;
+                    padding: 0.5em 2em;
+                    font-family: $heading;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                }
+            }
+        }
+    }
+    .footer {
+        .footer-container {
+            width: 100%;
+            margin: 0;
+            flex-direction: column;
+            align-items: center;
+            .first-box {
+                .navigation-links {
+                    margin-top: 2em;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .navigation-link-item {
+                        margin-right: 0;
+                        margin-top: 1.5em;
+                    }
+                }
+            }
+            .second-box {
+                .social-media-links {
+                    justify-content: center;
+                    margin-top: 4em;
+                    align-items: center;
+                    .svg-cover {
+                        margin: 0;
+                        svg {
+                            margin: 0em 1em;
+                        }
+                    }
                 }
             }
         }
